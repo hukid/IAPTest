@@ -3,6 +3,8 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '12.0'
 
+$sqipVersion = '1.5.4'
+
 target 'IAPTest' do
   config = use_native_modules!
 
@@ -11,8 +13,6 @@ target 'IAPTest' do
     # to enable hermes on iOS, change `false` to `true` and then install pods
     :hermes_enabled => false
   )
-
-  pod 'RNSquareInAppPayments', :path => '../node_modules/react-native-square-in-app-payments'
 
   target 'IAPTestTests' do
     inherit! :complete
